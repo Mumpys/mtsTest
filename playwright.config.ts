@@ -24,6 +24,8 @@ export default defineConfig({
         viewport: { width: 1920, height: 1080 },
         ...devices['Desktop Chrome'],
         channel: 'chrome',
+        userAgent:
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/109.0',
       },
     },
   ],
