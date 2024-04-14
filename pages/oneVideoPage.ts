@@ -34,6 +34,7 @@ export class OneVideoPage extends BasePage {
   }
 
   async checkVideoPlayerElements() {
+    await this.page.waitForLoadState();
     await this.videoPlayer.hover({ force: true });
     await this.videoControlPanel.waitFor({ state: 'visible' });
     await this.timelineBar.waitFor({ state: 'visible' });
