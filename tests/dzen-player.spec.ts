@@ -26,8 +26,8 @@ test.describe('Dzen tests', () => {
 
     const singleVideoPage = new OneVideoPage(currentVideoPage, '');
 
-    await singleVideoPage.checkVideoPleerElements();
-    await singleVideoPage.waitVideoPleerGone();
+    await singleVideoPage.checkVideoPlayerElements();
+    await singleVideoPage.waitVideoPlayerGone();
     await singleVideoPage.openFullScreen();
   });
 });

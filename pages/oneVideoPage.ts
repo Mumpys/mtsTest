@@ -2,7 +2,7 @@ import { Locator, Page } from '@playwright/test';
 import { BasePage } from './basePage';
 
 export class OneVideoPage extends BasePage {
-  readonly videoPleer: Locator;
+  readonly videoPlayer: Locator;
   readonly videoControlPanel: Locator;
 
   readonly timelineBar: Locator;
@@ -17,8 +17,8 @@ export class OneVideoPage extends BasePage {
   constructor(page: Page, path: string) {
     super(page, path);
 
-    this.videoPleer = this.page.getByLabel('Видеоплеер');
-    this.videoControlPanel = this.videoPleer.locator(
+    this.videoPlayer = this.page.getByLabel('Видеоплеер');
+    this.videoControlPanel = this.videoPlayer.locator(
       '//div[@class="zen-ui-video-video-player__control-toggle _is-controls-visible"]'
     );
     this.timelineBar = this.page.getByTestId('timeline-clickable-zone');
@@ -33,8 +33,8 @@ export class OneVideoPage extends BasePage {
     this.fullScreenButton = this.page.getByLabel('Полноэкранный просмотр');
   }
 
-  async checkVideoPleerElements() {
-    await this.videoPleer.hover({ force: true });
+  async checkVideoPlayerElements() {
+    await this.videoPlayer.hover({ force: true });
     await this.videoControlPanel.waitFor({ state: 'visible' });
     await this.timelineBar.waitFor({ state: 'visible' });
     await this.previousVideoButton.waitFor({ state: 'visible' });
@@ -46,11 +46,11 @@ export class OneVideoPage extends BasePage {
   }
 
   async clickFullScreen() {
-    await this.videoPleer.hover({ force: true });
+    await this.videoPlayer.hover({ force: true });
     await this.fullScreenButton.click();
   }
 
-  async waitVideoPleerGone() {
+  async waitVideoPlayerGone() {
     await this.videoControlPanel.waitFor({ state: 'detached' });
   }
 
