@@ -11,4 +11,4 @@ RUN npm install
 RUN npx playwright install chrome
 
 # Run playwright test
-CMD [ "npx", "playwright", "test", "--reporter=list" ]
+RUN npm run test
