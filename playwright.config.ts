@@ -12,6 +12,7 @@ export default defineConfig({
         suiteTitle: true,
       },
     ],
+    ['line'],
   ],
   use: {
     trace: 'off',

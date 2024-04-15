@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "playwright test --reporter=list",
+    "test": "playwright test",
     "ui": "playwright test --ui",
     "allure": "npx allure-commandline serve"
   },
