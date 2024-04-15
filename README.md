@@ -9,3 +9,7 @@
 
 4) генерации отчета allure
 ```npm run allure```
+
+5) Запуск тестов в контейнере Docker
+```docker build -t testMTS/dockerfile .```
+
